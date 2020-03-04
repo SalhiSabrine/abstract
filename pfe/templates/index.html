@@ -1,0 +1,275 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from puffintheme.com/demo/oculux/html/page-user-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2020 16:04:05 GMT -->
+<head>
+<title>DIESE</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Oculux Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate-css/vivify.min.css' %}">
+<link rel="stylesheet"  href="{% static 'css/site.min.css' %}">
+
+</head>
+<body class="theme-cyan font-montserrat">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+    </div>
+</div>
+
+<!-- Theme Setting -->
+
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div id="wrapper">
+
+    <nav class="navbar top-navbar">
+        <div class="container-fluid">
+
+            <div class="navbar-left">
+                
+                <ul class="nav navbar-nav">
+                    
+                    <li class="dropdown">
+                        
+                        
+                    
+                    <li><a href="javascript:void(0);" class="megamenu_toggle icon-menu" title="Mega Menu">Mega</a></li>
+                    <li class="p_social"><a href="page-social.html" class="social icon-menu" title="News">Social</a></li>
+                    <li class="p_news"><a href="page-news.html" class="news icon-menu" title="News">News</a></li>
+                    <li class="p_blog"><a href="page-blog.html" class="blog icon-menu" title="Blog">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbar-right">
+                <div id="navbar-menu">
+                    <!--right nav-->
+                </div>
+            </div>
+        </div>
+        <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    </nav>
+    
+    
+    
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="navbar-brand">
+            <a href="#"><img src="{% static 'fonts/logo.png' %} " alt="logo"  style="
+                height: auto;
+                width: 230px;" ><span></span></a>
+            <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu icon-close"></i></button>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                
+                <div class="dropdown">
+                    <span>Bienvenue,</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Admin</strong></a>
+                    <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                        <li><a href="page-profile.html"><i class="fa fa-user"></i>Mon profil</a></li>
+                        
+                        <li><a href="{% url 'pfe:logout' %}"><i class="fa fa-user"></i></i>Déconnexion</a></li>
+                    </ul>
+                </div>                
+            </div>  
+            <nav id="left-sidebar-nav" class="sidebar-nav">
+                <ul id="main-menu" class="metismenu">
+                    
+                    
+                        
+                   
+                    
+                        
+                    <li class="active open">
+                        <a href="{% url 'pfe:index' %}" class="has-arrow"><i class="fa fa-user"></i><span>Gestion des employeurs</span></a>
+                        <ul>
+                            <!--li><a href="page-blank.html">Blank Page</a></li>                            
+                            <li><a href="page-profile.html">User Profile</a></li>
+                            <li class="active"><a href="page-user-list.html">User List</a></li>
+                            <li><a href="page-testimonials.html">Testimonials</a></li>
+                            <li><a href="page-invoices.html">Invoices</a></li>
+                            <li><a href="page-timeline.html">Timeline</a></li>
+                            <li><a href="page-search-results.html">Search Results</a></li>
+                            <li><a href="page-gallery.html">Image Gallery</a></li>                            
+                            <li><a href="page-pricing.html">Pricing</a></li>
+                            <li><a href="page-coming-soon.html">Coming Soon</a></li-->
+                        </ul>
+                    </li>                    
+                </ul>
+            </nav>     
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12">
+                        
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <!--li class="breadcrumb-item"><a href="#">Oculux</a></li-->
+                            
+                            <li class="breadcrumb-item active" aria-current="page">Gestion Des Employeurs</li>
+                            </ol>
+                        </nav>
+                    </div>            
+                    <div class="col-md-6 col-sm-12 text-right hidden-xs">
+                        <!--a href="javascript:void(0);" class="btn btn-sm btn-primary btn-round" title="">Add New</a-->
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#Users">Liste des employeurs</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addUser">Nouveau Employeur</a></li>        
+                        </ul>
+                        <div class="tab-content mt-0">
+                            <div class="tab-pane active show" id="Users">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-custom spacing8">
+                                        <thead>
+                                            <tr>
+                                                <th class="w60">Nom d'utilisateur</th>
+                                                <th>Nom</th>
+                                                <th>Prénom</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th class="w100">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            {% for i in roles %}
+                                            
+                                            <tr>
+                                                <td>
+                                                       {{i.user.username}}
+                                                </td>
+                                                <td>
+                                                        {{i.user.last_name}}
+                                                    
+                                                </td>
+                                                <td>{{i.user.first_name}}</span></td>
+                                                <td>{{i.user.email}}</td>
+                                                <td>{{i.role}}</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-default" title="Edit"><i class="fa fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                </td>
+                                            </tr>
+{% endfor %}
+
+                                     
+                                        </tbody>
+                                    </table>                
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="addUser">
+                                    <form method="POST" action="{% url 'pfe:ajouter' %}">
+                                            {% csrf_token %}
+                                <div class="body mt-2">
+                                    <div class="row clearfix">
+                                        
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="username" type="text" class="form-control" placeholder="Nom d'utilisateur ">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="name" type="text" class="form-control" placeholder="Nom">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="lastname" type="text" class="form-control" placeholder="prenom ">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="email" type="text" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="password" type="password" class="form-control" placeholder="password ">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input name="cpassword" type="password" class="form-control" placeholder="confirm password">
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <select name="role" class="form-control show-tick" style="
+    margin-left: 20‒;
+    margin-left: 250px;
+">
+                                                    <option>Administrateur</option>
+                                                    <option>Designer</option>
+                                                    <option>Rédacteur</option>
+                                                    <option>CM</option>
+                                                </select>
+                                                    
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-12" >
+                                            
+                                            <button type="submit" class="btn btn-sm btn-primary btn-round" style="
+    margin-left: 430px;
+">Ajouter</button>
+                                            <button type="button" class="btn btn-sm btn-primary btn-round" a href="{% url 'pfe:logout' %}">Retour</button>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Javascript -->
+<script src="{% static 'js/libscripts.bundle.js' %}"></script>    
+<script src="{% static 'js/vendorscripts.bundle.js' %}"></script>
+<script src="{% static 'js/mainscripts.bundle.js' %}"></script>
+</body>
+
+<!-- Mirrored from puffintheme.com/demo/oculux/html/page-user-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2020 16:04:05 GMT -->
+</html>

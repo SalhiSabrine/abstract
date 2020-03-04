@@ -1,0 +1,49 @@
+
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+<div class="tab-content mt-0">
+    <div class="tab-pane" id="addUser">
+                                <div class="body mt-2">
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="First Name *">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Last Name">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                             <div class="form-group">
+                                             <input type="text" class="form-control" placeholder="email *">
+                                              </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                    
+                                            <select class="form-control show-tick">
+                                            <option>Select  Type</option>
+                                            <option>Super Admin</option>
+                                            <option>Admin</option>
+                                            <option>Employee</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="col-12">
+                                            
+                                            <button type="button" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                                        </div>
+                                    </div>
+                                </div>
+    </div>
+</div>							
+{% endblock content %}

@@ -1,0 +1,106 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>DIESE</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Oculux Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--link rel="icon" href="favicon.ico" type="image/x-icon"-->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate-css/vivify.min.css' %}">
+<link rel="stylesheet"  href="{% static 'css/site.min.css' %}">
+<head>
+
+</head>
+<style>
+   
+   body {
+  background-image: url('media/cc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+    
+    
+</style>
+
+
+<body class="theme-cyan font-montserrat">
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="bar1"></div>
+        
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+    </div>
+</div>
+
+
+
+<div class="auth-main particles_js">
+    <div class="auth_div vivify popIn">
+        <div class="auth_brand">
+            <a class="navbar-brand" href="javascript:void(0);"><img src="media/valide.png" alt="logo" style="
+                width: 300px;
+                height: 80px;"></a>
+        </div>
+        
+        <div class="card">
+            <div class="body">
+                <h1 class="lead" style="
+    padding-top: 0px;
+    margin-top: 5px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    margin-bottom: 20px;
+">Connectez-vous à votre compte</h1>
+                <form method="post">
+				     {% csrf_token %}
+                    <div class="form-group">
+                        <label for="user" class="control-label sr-only">Username</label>
+                        <input type="text" name="username" class="form-control round" id="user"  placeholder="nom d'utilisateur">
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password" class="control-label sr-only">Password</label>
+                        <input type="password" name="password" class="form-control round" id="signin-password" placeholder="mot de passe">
+                    </div>
+                
+                    <div>
+                    <button type="submit" class="btn btn-primary btn-md">Connexion <i class="fa fa-sign-in"></i></a>
+                    </div>
+                    
+                    </form>
+				
+				<div>
+                       {% for message in messages %}
+                       <p style="
+                       margin-bottom: 0px;
+                       border-bottom-width: 10px;
+                       width: 315px;
+                       height: 50px;
+                       padding-top: 20px;">  {{message}} </p>
+                       {% endfor %}
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script src="{% static 'js/libscripts.bundle.js' %}"></script>    
+<script src="{% static 'js/vendorscripts.bundle.js' %}"></script>
+<script src="{% static 'js/mainscripts.bundle.js' %}"></script>
+</body>
+</html>
